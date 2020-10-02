@@ -1,0 +1,225 @@
+#container header {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 5rem;
+    height: 5rem;
+
+    padding: 0 0 0 1.875rem;
+}
+
+header ul li {
+    list-style-type: none;
+    display: none;
+}
+
+header .barries div {
+    width: 30px;
+    height: 5px;
+
+    background-color: black;
+
+    border-radius: 4px;
+}
+
+header .barries .little {
+    width: 20px;
+    transform: translateX(10px);
+
+    margin-top: 5px;
+}
+
+main .index .mainImg {
+    display: none;
+}
+
+main .index h1 {
+    font: 700 4rem 'Work sans';
+    padding: 0 0 0 1.8rem;
+}
+
+main .index h2 {
+    font: 400 3rem 'Work sans';
+    padding: 0 0 0 1.8rem;
+}
+
+main .index p {
+    font: 400 1.5rem 'Work sans';
+    padding: 0 0 0 1.8rem;
+    color: #3f3e3e;
+}
+
+main .options {
+    height: 10rem;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+main .options div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 50px;
+
+    background-color: #e0e0e0;
+    color: black;
+
+    border-radius: 40px;
+
+    margin: 0 0 0 1.8rem;
+}
+
+main .options .select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 50px;
+
+    background-color: rgb(0, 0, 0);
+
+    border-radius: 40px;
+
+    margin: 0 0 0 1.8rem;
+}
+
+main .options div a {
+    text-decoration: none;
+    font: 400 1.7rem 'Work sans';
+    color: #000000;
+}
+
+main .options .select a {
+    text-decoration: none;
+    font: 400 1.7rem 'Work sans';
+    color: rgb(255, 255, 255);
+}
+
+main .plates {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap: 20px;
+}
+
+main .plates .salad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: linear-gradient(90deg, #FFFFFF 0%, #DBDBDB 100%);
+
+    border-radius: 150px;
+    
+}
+
+main .plates .salad .saladImg {
+    width: 250px;
+    height: 250px;
+
+    transform: translateX(-50px);
+
+    transition: 0.3s;
+}
+
+main .plates .salad:hover .saladImg {
+    width: 270px;
+    height: 270px;
+}
+
+main .plates .salad .texts {
+    width: auto;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transform: translateX(-50px);
+}
+
+main .plates .salad h3 {
+    font: 500 2rem 'Work sans'
+}
+
+main .plates .salad p {
+    font: 400 1.5rem 'Work sans';
+    color: #535353;
+}
+
+main .plates .salad strong {
+    font: 500 2.5rem 'Work sans';
+    padding: 20px 0 0 0;
+}
+
+main .plates .salad button {
+    background: none;
+    border: none;
+    outline: none;
+
+    transform: translateX(-20px);
+
+    cursor: pointer;
+}
+
+
+main .plates .salad button img {
+    width: 30px;
+    height: 30px;
+
+    order: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 80px;
+
+    background-color: #000000;
+
+    border-radius: 50px;
+
+    margin-bottom: 50px;
+
+    position: fixed;
+    top: 85%;
+    /* bottom: 10%; */
+}
+
+footer .navBar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .navBar ul li {
+    padding: 0 20px 0 20px;
+}
+
+footer .navBar img {
+    width: 40px;
+    height: 40px;
+}

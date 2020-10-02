@@ -1,0 +1,33 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {    
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html,
+body,
+input,
+button {
+    font-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#container {
+    width: 90vw;
+    height: 100vh;
+    max-width: 600px;
+}
