@@ -59,24 +59,28 @@ main .options {
     height: 10rem;
 
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 }
 
-main .options div {
+main .options button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: none;
 
     width: 100px;
     height: 50px;
 
     background-color: #e0e0e0;
+
+    font: 400 1.5rem 'Work sans';
     color: black;
 
+    border: none;
     border-radius: 40px;
-
-    margin: 0 0 0 1.8rem;
+    outline: none;
 }
 
 main .options .select {
@@ -88,35 +92,36 @@ main .options .select {
     height: 50px;
 
     background-color: rgb(0, 0, 0);
+    color: #FFFFFF;
 
     border-radius: 40px;
 
-    margin: 0 0 0 1.8rem;
+    /* margin: 0 0 0 1.8rem; */
 }
 
-main .options div a {
-    text-decoration: none;
-    font: 400 1.7rem 'Work sans';
-    color: #000000;
+main .options .adjustments .adj {
+    width: 30px;
+    height: 30px;
 }
 
-main .options .select a {
-    text-decoration: none;
-    font: 400 1.7rem 'Work sans';
-    color: rgb(255, 255, 255);
+main .options img {
+    /* margin: 0 0 0 6rem; */
+
+    width: 30px;
+    height: 30px;
 }
 
 main .plates {
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-template-columns: repeat(1, minmax(250px, 2fr));
     grid-gap: 20px;
 }
 
 main .plates .salad {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
@@ -162,7 +167,7 @@ main .plates .salad p {
 }
 
 main .plates .salad strong {
-    font: 500 2.5rem 'Work sans';
+    font: 600 2.2rem 'Work sans';
     padding: 20px 0 0 0;
 }
 
@@ -184,6 +189,11 @@ main .plates .salad button img {
     order: 1;
 }
 
+main .plates .spaceFooter {
+    width: 100%;
+    height: 100px;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -195,21 +205,24 @@ footer .navBar {
     justify-content: center;
     align-items: center;
 
-    width: 80%;
+    width: 90%;
     height: 80px;
 
     background-color: #000000;
 
     border-radius: 50px;
+    box-shadow: 0 20px 60px #000000;
 
     margin-bottom: 50px;
 
     position: fixed;
     top: 85%;
-    /* bottom: 10%; */
 }
 
 footer .navBar ul {
+    width: 80%;
+    height: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,6 +233,64 @@ footer .navBar ul li {
 }
 
 footer .navBar img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 65%;
+    }
+
+    main .plates {
+        width: 100%;
+    
+        display: grid;
+        grid-template-columns: repeat(2, minmax(250px, 2fr));
+    }
+
+    main .plates .salad {
+        width: 100%;
+        height: 90%;
+
+        display: flex;
+        background: linear-gradient(127.53deg, #FFFFFF 0%, #DBDBDB 100%);
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .plates .salad .saladImg {
+        width: 300px;
+        height: 300px;
+    
+        transform: translateX(0px);
+
+    }
+
+    main .plates .salad:hover .saladImg {
+        width: 320px;
+        height: 320px;
+    }
+
+    main .plates .salad .texts {
+        width: auto;
+        height: auto;
+
+        align-items: center;
+        transform: translateX(0px);
+    }
+
+    main .plates .salad button {
+        width: auto;
+        height: 100px;
+    
+        transform: translateX(0);
+    }
+
+    footer .navBar img {
+        width: 45px;
+        height: 45px;
+    }
 }
