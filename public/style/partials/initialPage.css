@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+header .logo {
+    display: none;
+}
+
 header img {
     width: 5rem;
     height: 5rem;
@@ -45,7 +49,7 @@ main .index h1 {
 }
 
 main .index h2 {
-    font: 400 3rem 'Work sans';
+    font: 300 3rem 'Work sans';
     padding: 0 0 0 1.8rem;
 }
 
@@ -63,7 +67,7 @@ main .options {
     align-items: center;
 }
 
-main .options button {
+main .options .btnOptions {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +85,10 @@ main .options button {
     border: none;
     border-radius: 40px;
     outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 main .options .select {
@@ -111,7 +119,7 @@ main .options img {
     height: 30px;
 }
 
-main .plates {
+main .area {
     width: 100%;
 
     display: grid;
@@ -119,7 +127,7 @@ main .plates {
     grid-gap: 20px;
 }
 
-main .plates .salad {
+main .salad {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +140,7 @@ main .plates .salad {
     
 }
 
-main .plates .salad .saladImg {
+main .salad .saladImg {
     width: 250px;
     height: 250px;
 
@@ -141,12 +149,12 @@ main .plates .salad .saladImg {
     transition: 0.3s;
 }
 
-main .plates .salad:hover .saladImg {
+main .salad:hover .saladImg {
     width: 270px;
     height: 270px;
 }
 
-main .plates .salad .texts {
+main .salad .texts {
     width: auto;
     height: 250px;
 
@@ -157,21 +165,21 @@ main .plates .salad .texts {
     transform: translateX(-50px);
 }
 
-main .plates .salad h3 {
+main .salad h3 {
     font: 500 2rem 'Work sans'
 }
 
-main .plates .salad p {
+main .salad p {
     font: 400 1.5rem 'Work sans';
     color: #535353;
 }
 
-main .plates .salad strong {
+main .salad strong {
     font: 600 2.2rem 'Work sans';
     padding: 20px 0 0 0;
 }
 
-main .plates .salad button {
+main .salad button {
     background: none;
     border: none;
     outline: none;
@@ -182,14 +190,14 @@ main .plates .salad button {
 }
 
 
-main .plates .salad button img {
+main .salad button img {
     width: 30px;
     height: 30px;
 
     order: 1;
 }
 
-main .plates .spaceFooter {
+main .spaceFooter {
     width: 100%;
     height: 100px;
 }
@@ -224,7 +232,7 @@ footer .navBar ul {
     height: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -242,14 +250,15 @@ footer .navBar img {
         font-size: 65%;
     }
 
-    main .plates {
+    main .area {
         width: 100%;
     
         display: grid;
-        grid-template-columns: repeat(2, minmax(250px, 2fr));
+        grid-template-columns: repeat(1, minmax(250px, 2fr));
+        grid-gap: 20px;
     }
 
-    main .plates .salad {
+    main .salad {
         width: 100%;
         height: 90%;
 
@@ -261,7 +270,7 @@ footer .navBar img {
         align-items: center;
     }
 
-    main .plates .salad .saladImg {
+    main .salad .saladImg {
         width: 300px;
         height: 300px;
     
@@ -269,12 +278,12 @@ footer .navBar img {
 
     }
 
-    main .plates .salad:hover .saladImg {
+    main .salad:hover .saladImg {
         width: 320px;
         height: 320px;
     }
 
-    main .plates .salad .texts {
+    main .salad .texts {
         width: auto;
         height: auto;
 
@@ -282,7 +291,7 @@ footer .navBar img {
         transform: translateX(0px);
     }
 
-    main .plates .salad button {
+    main .salad button {
         width: auto;
         height: 100px;
     
@@ -292,5 +301,297 @@ footer .navBar img {
     footer .navBar img {
         width: 45px;
         height: 45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background: #DBDBDB;
+    }
+
+    #container {
+        width: 95%;
+        height: calc(100% - 40px);
+        top: 20px;
+
+        background: linear-gradient(127.53deg, #FFFFFF 0%, rgba(237, 237, 237, 0.7) 63.9%, rgba(219, 219, 219, 0.1) 100%);
+
+        border-radius: 50px;
+
+        max-width: none;
+    }
+
+    #container header {
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    header .logo {
+        display: flex;
+
+        width: 37px;
+        height: 37px;
+
+        margin: 0 0 0 30px;
+    }
+
+    header ul {
+        width: auto;
+        height: auto;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header ul li {
+        display: flex;
+
+        margin: 0 40px 0 0;
+    }
+
+    header ul a {
+        text-decoration: none;
+    }
+
+    header ul .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 120px;
+        height: 35px;
+
+        font: 500 13px 'Work sans';
+        color: #000000;
+        
+        border-radius: 20px;
+
+        transition: 0.3s;
+    }
+
+    header ul .btn:hover {
+        background-color: #d6d6d6;
+    }
+
+    header ul .btn.select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 120px;
+        height: 35px;
+
+        background-color: #000000;
+
+        font: 500 13px 'Work sans';
+        color: #ffffff;
+
+        transition: 0.3s;
+    }
+
+    header ul .btn.select:hover {
+        background-color: #2b2b2b;
+    }
+
+    header .search {
+        display: none;
+    }
+
+    header .barries {
+        display: none;
+    }
+
+    #container main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "index products";
+    }
+
+    main .index {
+        grid-area: index;
+
+        margin: 40px 0 0 0;
+    }
+
+    main .index h1 {
+        font: 700 50px 'Work sans';
+        margin: 0 0 0 30px;
+    }
+
+    main .index h2 {
+        margin: 0 0 0 30px;
+    }
+
+    main .index p {
+        margin: 0 0 0 30px;
+    }
+
+    main .index .mainImg {
+        display: flex;
+        justify-content: center;
+    }
+
+    main .index .mainImg img {
+        width: 430px;
+        height: 430px;
+    }
+
+    main .options {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        width: auto;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    main .options .btnOptions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background: none;
+    
+        width: 100px;
+        height: 30px;
+    
+        background: none;
+    
+        font: 400 13px 'Work sans';
+        color: black;
+    
+        border: none;
+        border-radius: 40px;
+        outline: none;
+    }
+    
+    main .options .select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 100px;
+        height: 30px;
+
+        background-color: #ffffff;
+
+        font: 600 13px 'Work sans';
+        color: black;
+    
+        border-radius: 40px;
+    
+        box-shadow: 0px 10px 30px #979797;
+
+        transition: 0.3s;
+    }
+
+    main .options .adj {
+        display: none;
+    }
+
+    main .area {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(12, 45px);
+        grid-gap: 0;
+    }
+
+    main .area .options, main .area .salmao{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    main {
+        display: flex;
+    }
+
+    main .salad {    
+        width: 80%;
+        height: 80%;
+    
+        background: linear-gradient(127.53deg, rgba(219, 219, 219, 0.1) 0%, rgba(226, 226, 226, 0.5) 51.56%, #FFFFFF 99.99%, #DBDBDB 100%, #DBDBDB 100%);
+    
+        border-radius: 20px;
+        box-shadow: 50px 50px 60px -40px #b9b9b9;
+
+        transition: 0.35s;
+    }
+
+    main .salmao {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 6;
+        grid-row-end: 13;
+    }
+
+    main .caesar {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+
+    main .chicken {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 14;
+    }
+
+    main .beansballs {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 11;
+    }
+
+    main .salad .saladImg {
+        width: 180px;
+        height: 180px;
+    }
+
+    main .salad:hover {
+        background-color: #FFFFFF;
+    }
+
+    main .salad:hover .saladImg {
+        width: 183px;
+        height: 183px;
+    }
+
+    main .salad .texts {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+
+    main .salad .texts h3 {
+        font: 500 1.7rem 'Work sans';
+    }
+
+    main .salad .texts p {
+        font: 500 1.3rem 'Work sans';
+        color: #888888
+    }
+
+    main .salad .texts strong {
+        font: 600 1.8rem 'Work sans';
+    }
+
+    main .spaceFooter {
+        display: none;
+    }
+
+    #container footer {
+        display: none;
     }
 }
