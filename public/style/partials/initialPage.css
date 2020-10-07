@@ -107,9 +107,13 @@ main .options .select {
     /* margin: 0 0 0 1.8rem; */
 }
 
-main .options .adjustments .adj {
+main .options .adj {
     width: 30px;
     height: 30px;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 main .options img {
@@ -118,6 +122,84 @@ main .options img {
     width: 30px;
     height: 30px;
 }
+
+main .options .adjustments {
+    display: none;
+}
+
+main .options .adjustments.on {
+    width: 250px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    background: linear-gradient(149.92deg, #FFFFFF 0%, #A6A6A6 100%);
+    color: #000000;
+
+    left: 38%;
+    top: 31%;
+
+    border-radius: 20px 0 20px 20px;
+
+    z-index: 99;
+}
+
+main .options .adjustments.on .tittle {
+    font: 400 2rem 'Work sans';
+
+    padding: 2rem 2rem;
+}
+
+main .options .adjustments.on ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .options .adjustments.on ul li {
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    margin: 0 1rem;
+}
+
+.options .adjustments.on .order, .price, .evaluation, .yes, .no {
+    width: 50px;
+    height: 50px;
+
+    background: #AAAAAA;
+
+    border-radius: 50%;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.options .overlay {
+    display: none;
+}
+
+.options .overlay.on {
+    display: flex;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    position: fixed;
+    z-index: 900;
+
+    transition: all .5s;
+
+    background-color: rgba(0, 0, 0, 0.322);
+ }
 
 main .area {
     width: 100%;
